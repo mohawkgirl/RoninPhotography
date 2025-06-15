@@ -1,0 +1,106 @@
+from pathlib import Path
+
+# Build HTML content with image placeholders and captions
+html_with_placeholders = """
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CityDawg & Crew Portfolio</title>
+    <style>
+        body { font-family: Arial, sans-serif; background-color: #f9f9f9; margin: 0; padding: 0; }
+        header { background-color: #222; color: #fff; padding: 20px; text-align: center; }
+        nav { background-color: #333; padding: 10px; text-align: center; }
+        nav a { color: white; margin: 0 15px; text-decoration: none; }
+        section { padding: 40px; max-width: 900px; margin: auto; }
+        h2 { border-bottom: 2px solid #ccc; padding-bottom: 5px; }
+        figure { margin: 20px 0; }
+        img { width: 100%; max-width: 800px; height: auto; border-radius: 6px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
+        figcaption { font-style: italic; color: #555; margin-top: 8px; }
+    </style>
+</head>
+<body>
+<header>
+    <h1>CityDawg & Crew: Portraits of Personality</h1>
+    <p>A photography portfolio by Jennifer — where survival meets street style, and every pup tells a story.</p>
+</header>
+<nav>
+    <a href="#portraits">Portraits</a>
+    <a href="#playing">Now Playing</a>
+    <a href="#snuggling">Snuggling</a>
+    <a href="#edits">Edits</a>
+</nav>
+
+<section id="portraits">
+    <h2>🐾 Portraits of Personality</h2>
+    <figure>
+        <img src="placeholder_citydawg1.jpg" alt="CityDawg Portrait">
+        <figcaption>“Eyes wide. Heart louder.” — CityDawg sizing up the world with calm defiance.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_mamasbear1.jpg" alt="MamasBear Portrait">
+        <figcaption>“Suspicious. Cozy. Not sorry.” — MamasBear keeping one eye open just in case.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_poppop1.jpg" alt="PopPop Portrait">
+        <figcaption>“Little lion energy.” — PopPop basking in light like the royalty he is.</figcaption>
+    </figure>
+</section>
+
+<section id="playing">
+    <h2>🎮 Now Playing Pups</h2>
+    <figure>
+        <img src="placeholder_play1.png" alt="Playtime Zoomies">
+        <figcaption>DooDoo flying through the yard mid-zoomie — pure blur, pure joy.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_play2.png" alt="Kiss Attack">
+        <figcaption>BabyCujo launching a surprise kiss attack. Consent not guaranteed.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_play3.png" alt="PopPop Run">
+        <figcaption>PopPop’s version of cardio: run, bark, repeat.</figcaption>
+    </figure>
+</section>
+
+<section id="snuggling">
+    <h2>💤 Sleeping & Snuggling</h2>
+    <figure>
+        <img src="placeholder_sleep1.jpg" alt="Nap Time">
+        <figcaption>Side-by-side snoring. There’s nothing softer than a PopPop power nap.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_sleep2.jpg" alt="Cuddle Pile">
+        <figcaption>BabyCujo nestled like a comma between blankets and heartbeat.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_sleep3.png" alt="Wrapped Up">
+        <figcaption>CityDawg wrapped in hoodie armor, tucked in but still on alert.</figcaption>
+    </figure>
+</section>
+
+<section id="edits">
+    <h2>🎨 Edits & Street Style</h2>
+    <figure>
+        <img src="placeholder_edit1.jpeg" alt="Street Edit">
+        <figcaption>Spray-paint dreams and neon vibes — DooDoo against the graffiti wall.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_edit2.png" alt="Comic Book Style">
+        <figcaption>CityDawg: comic-strip superhero in a service harness.</figcaption>
+    </figure>
+    <figure>
+        <img src="placeholder_edit3.jpg" alt="Glitch Pup">
+        <figcaption>PopPop caught mid-glitch — punk meets pixels.</figcaption>
+    </figure>
+</section>
+
+</body>
+</html>
+"""
+
+# Save the HTML layout with placeholders
+placeholder_html_path = "/mnt/data/CityDawg_Portfolio_Placeholders.html"
+Path(placeholder_html_path).write_text(html_with_placeholders, encoding='utf-8')
+
+placeholder_html_path
